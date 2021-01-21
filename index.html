@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<title>Side Login & Registration Bar</title>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="shortcut icon" href="images/fav-icon.png">
+<!--using-FontAwesome-For-Icons-->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="main">
+        <!--img------------------->
+        <div class="main-img">
+            <img src="images/model.svg"/>
+        </div>
+        <!--text-and-btns--------------->
+        <div class="text-btns">
+            <p>Hello,this Side login bar was created with HTML, CSS and JQuery.</p>
+            <!--login-and-sign-up-btns------->
+            <div class="btns">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="sign-up-btn">Sign Up</a>
+            </div>
+        <!--login-with-social-media------------>
+        <span>Or Via Social Media</span>
+        <!--social----------------->
+        <div class="via-social">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-google"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+        </div>
+        </div>
+
+
+    <!--side-login-bar----------------------------------------->
+    <div class="side-login">
+        <!--cancel-btn--------------->
+        <a href="#" class="login-cancel-btn">
+            <i class="fas fa-times"></i>
+        </a>
+
+        <!--heading-------->
+        <strong>Sign In</strong>
+    <!--form------------------------>
+        <form>
+            <!--email---->
+            <label>Email<samp>*</samp></label>
+            <div class="email">
+                <i class="far fa-paper-plane"></i>
+                <input type="email" name="email" required>
+            </div>
+            <!--password---->
+            <label>Password<samp>*</samp></label>
+            <div class="password">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" required>
+            </div>
+            <!--login-btn-->
+            <input type="submit" name="login" class="login" value="Login">
+            <!--forget------------>
+            <a href="#" class="forget">Forget Your Password?</a>
+        </form>
+        <!--relative-bottom-text------------------->
+    <div class="relative-text">
+        <span>Welcome To This Site</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    </div>
+    </div>
+
+
+    <!--side-sign-up-bar----------------------------------------->
+    <div class="side-sign-up">
+        <!--cancel-btn--------------->
+        <a href="#" class="sign-up-cancel-btn">
+            <i class="fas fa-times"></i>
+        </a>
+
+        <!--heading-------->
+        <strong>Sign Up</strong>
+    <!--form------------------------>
+        <form>
+            <!--password---->
+            <label>Full Name<samp>*</samp></label>
+            <div class="name">
+                <i class="far fa-copy"></i>
+                <input type="text" name="fullname" required>
+            </div>
+            <!--email---->
+            <label>Email<samp>*</samp></label>
+            <div class="email">
+                <i class="far fa-paper-plane"></i>
+                <input type="email" name="email" required>
+            </div>
+            <!--password---->
+            <label>Password<samp>*</samp></label>
+            <div class="password">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" required>
+            </div>
+            
+            <!--login-btn-->
+            <input type="submit" name="login" class="sign-up" value="Sign Up">
+        </form>
+        <!--relative-bottom-text------------------->
+    <div class="relative-text">
+        <span>Sign Up For Better Experience</span>
+        <p>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+
+    </div>
+    </div>
+
+    </section>
+
+
+    <!--Jquery------------>
+    <script type="text/javascript" src="js/Jquery.js"></script>
+    <!--script---------->
+    <script type="text/javascript">
+    
+    $(document).on('click','.login-btn,.sign-up-btn',function(){
+        $('.main').addClass('main-active')
+    });
+
+    $(document).on('click','.login-btn',function(){
+        $('.side-login').addClass('side-login-active')
+    });
+
+    $(document).on('click','.sign-up-btn',function(){
+        $('.side-sign-up').addClass('side-sign-up-active')
+    });
+
+    $(document).on('click','.sign-up-cancel-btn,.login-cancel-btn',function(){
+        $('.main').removeClass('main-active')
+    });
+    $(document).on('click','.login-cancel-btn',function(){
+        $('.side-login').removeClass('side-login-active')
+    });
+    $(document).on('click','.sign-up-cancel-btn',function(){
+        $('.side-sign-up').removeClass('side-sign-up-active')
+    });
+
+
+    </script>
+</body>
+</html>
